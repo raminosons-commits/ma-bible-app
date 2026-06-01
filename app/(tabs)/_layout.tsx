@@ -1,6 +1,6 @@
 import { Colors } from "@/constants/Colors";
 import { Tabs } from "expo-router";
-import { BookOpen, Heart, Home } from "lucide-react-native";
+import { BookOpen, Heart, Home, ShoppingBag } from "lucide-react-native";
 import React from "react";
 
 export default function TabLayout() {
@@ -32,6 +32,14 @@ export default function TabLayout() {
         options={{
           title: "Favoris",
           tabBarIcon: ({ color }) => <Heart size={24} color={color} />,
+        }}
+      />
+      {/* NOUVEL ONGLET AJOUTÉ POUR TON EXERCICE DE GESTION DES PRODUITS */}
+      <Tabs.Screen
+        name="produits"
+        options={{
+          title: "Produits",
+          tabBarIcon: ({ color }) => <ShoppingBag size={24} color={color} />,
         }}
       />
     </Tabs>
